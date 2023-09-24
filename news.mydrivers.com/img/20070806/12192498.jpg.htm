@@ -1,0 +1,225 @@
+<!doctype html><HTML>
+<!-- saved from url=(0051)http://news.mydrivers.com/img/20070806/12192498.jpg --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>404页面--快科技(原驱动之家)--科技改变未来</title>
+<meta name="Keywords" content="404页面,网页404,页面丢失,网站404" />
+<meta name="description" content="抱歉,你访问的页面经我们仔细研究结果如下:访问地址可能输入错误;网络堵车了;网络开小差了" />
+<link href="//11.mydrivers.com/2020/css/public.css?v=0606" rel="stylesheet" type="text/css" />
+<link href="//11.mydrivers.com/2020/css/main_news.css" rel="stylesheet" type="text/css" />
+<link href="//11.mydrivers.com/2018/css/fl_login.css" rel="stylesheet" type="text/css" />
+<link href="//11.mydrivers.com/2020/css/winpop.css" rel="stylesheet" type="text/css">
+ <link href="//11.mydrivers.com/2020/css/model.css" rel="stylesheet" type="text/css">
+ <link href="//11.mydrivers.com/2020/css/nav_font/nav_iconfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//11.mydrivers.com/2018/news/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="//11.mydrivers.com/2018/news/jquery.lazyload.min.js"></script>
+<style>
+.pathway {
+    width: 1333px !important;
+    margin: auto;
+    height: 70px;
+    line-height: 65px;
+    color: #666;
+	font-size:14px !important;
+}
+.baidu {
+    width: 1333px !important;
+    margin: 10px auto;
+    overflow: hidden;
+}	
+.baidu_left {
+    float: left;
+    width: 980px !important;
+    text-align: center;
+    background: #fff;
+}
+.main_box {
+    width: 1333px !important;
+    height: 660px;
+    margin: 13px auto;
+    overflow: hidden;
+	background: #fff;
+}	
+.main_left {
+    width: 980px !important;
+    height: auto;
+    float: left;
+    background: #FFF;
+	text-align:left; 
+}
+.left_404{
+	height: auto;
+    float: left;
+	width:345px;
+	padding-left:310px;
+	padding-top:170px;
+	text-align: left;
+	}
+.left_404 p{
+	display:block;
+	padding: 60px 0 0 0;
+	margin: 0;	
+	}
+.left_404 p a{
+	padding:0 26px;
+	display:inline-block;
+	margin-right:25px;
+	font-size:16px;
+	height: 40px;
+	line-height: 40px;
+	color:#999;
+	background: #eee;
+	border-radius: 20px;
+	}
+	.left_404 p a:hover{
+		color:#777;
+	}	
+.left_404 p a.fhindex{	
+	border: 1px solid #32a7ff;
+	background: #fff;
+	color:#32a7ff;
+		}
+.left_404 p a.fhindex:hover{
+	color:#2081c9;
+	border-color: #2081c9;
+	}	
+.right_404{
+	height: auto;
+    float: left;
+	width:495px;
+	padding-top:90px;
+	}	
+body.night .close{
+	background: none !important;
+         } 
+</style>
+</head>
+<body>
+ <div id="headhtml"></div>
+
+<div class="main_box">
+<div class="left_404">
+  <img src="//icons.mydrivers.com/www/404.png" width="248" height="148" alt=""/> 
+	<p>
+	<a href="https://www.mydrivers.com/" class="fhindex">回到首页</a>
+	<a href="javascript:;" onclick="goRefresh()">原地复活</a>
+	</p>
+</div>		
+<div class="right_404">
+  <img src="//icons.mydrivers.com/www/404_2.png" width="480" height="400" alt=""/></div>	
+</div>
+<div id="footer">
+  <p class="copyright">快科技（驱动之家）·1997-2020 版权所有</p>
+  <p class="copyright">Copyright(C)Mydrivers.com, All Rights Reserved.</p>
+  <p class="copyright"><a href="http://www.miibeian.gov.cn/">豫ICP备18024899号-1</a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010502003950" style="margin-left:20px;"><img src="//icons.mydrivers.com/2018/news/batb.png"/>豫公网安备 41010502003950号</a> <br>
+    <br>
+  </p>
+</div>
+</body>
+</html>
+<!--<script type="text/javascript" src=""></script>-->
+<script>
+    var mydelayCB;
+    var winCallBack = false;
+    $(function () {
+        loadjs("//11.mydrivers.com/menu.js?v=1019", function () {
+            $("#headhtml").load('//news.mydrivers.com/incutf8/head_info_v2.htm', function () {
+                $(".nav ul").html(menuhtml());
+                $(".nav").children().children().removeClass("cur")
+                $(".nav").children().children().eq(1).addClass("cur")
+                BindMenuEvent();
+                BindMenuEventChild();
+                loadjs("//11.mydrivers.com/2021/news/common.js");
+            });
+        }); 
+    })
+    function BindMenuEvent() {
+        $("#menu_m>div>ul").children("li").unbind();
+        $("#menu_m>div>ul>li").children("a").hover(function () {
+            var obj = $(this).next();
+            if (obj.length > 0) {
+                obj.css("display", "");
+                if (obj.html().length == 0)
+                    getNavigationMenuInfo($(this).parent().index()+1);
+
+                mydelayCB = setTimeout(function () {
+                    obj.toggleClass("nav_show");
+                    clearevent();
+                }, 150);
+            }
+        }, function () {
+            clearTimeout(mydelayCB);
+        });
+        $("#menu_m>div>ul>li:last").hover(function () {
+            $(this).children("div").show();
+        }, function () {
+            $(this).children("div").hide();
+        });
+    }
+    function clearevent() {
+        $("#menu_m>div>ul>li").children("a").unbind();
+        $("#menu_m>div>ul").children("li").hover(function () { }, function () {
+            $(this).find("div").hide();
+            $(this).find("div").toggleClass("nav_show");
+            BindMenuEvent();
+        });
+    }
+
+    function BindMenuEventChild() {
+        $("#menu_m>div>ul").children("li").find("div").hover(function () {
+            $(this).show(); $(this).prev().toggleClass('cur');
+        });
+    }
+    function getNavigationMenuInfo(index) {
+        if (!winCallBack) {
+            winCallBack = true;
+            $.ajax({
+                type: 'GET',
+                url: '//blog.mydrivers.com/action/getNavigationMenuInfo.ashx?index=' + index,
+                dataType: "jsonp",
+                jsonpCallback: "menucallbackinfo",
+                error: function () { },
+                success: function (data) {
+                    $("#menu_m>div>ul li").eq(index - 1).find("div").html(data);
+                    winCallBack = false;
+                }
+            })
+        }
+    }
+    function search() {
+        var key = $("#myform_q").val();
+        if (key == "" || key == null) {
+            winpoperror("请输入关键字");
+            $("#myform_q").focus();
+            return false;
+        }
+        $("#myform").attr("action", "//so.mydrivers.com/news_utf8.aspx?q=" + escape(key));
+        return true;
+    }
+    function goRefresh() {
+        window.location.replace(window.location);
+    }
+    function loadjs(url, callback)
+    {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        if(typeof(callback) != "undefined"){
+            if (script.readyState) {
+                script.onreadystatechange = function () {
+                    if (script.readyState == "loaded" || script.readyState == "complete") {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {
+                script.onload = function () {
+                    callback();
+                };
+            }
+        }
+        script.src = url;
+        document.body.appendChild(script);
+    }
+</script>
