@@ -82,7 +82,7 @@ CLASS_MSN_MESSAGE.prototype.onunload = function() {
 CLASS_MSN_MESSAGE.prototype.oncommand = function(){ 
     //this.close = true;
     this.hide(); 
-//window.open("sn.eexx.me");
+//window.open("http://sn.eexx.me");
    
 } 
 /**//* 
